@@ -55,7 +55,8 @@ class ViewController: UIViewController, MePOSPrinterCallback {
     
     @IBAction func openCashDrawer(_ sender: UIButton) {
         do {
-            try mepos.openCashDrawer(validateCashDrawerStatus: false);
+            let opened:Bool = try mepos.openCashDrawer(validateCashDrawerStatus: false);
+            print("cash drawer opened? \(opened)");
         } catch {
             print("Error on open cash drawer");
         }
